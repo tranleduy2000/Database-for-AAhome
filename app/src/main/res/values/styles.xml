@@ -1,0 +1,23 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+        <item name="buttonOptStyle">@style/ButtonDigitStyle</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="ButtonDigitStyle" parent="Base.Widget.AppCompat.Button.Colored">
+        <item name="android:background">#212121</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#e0e0e0</item>
+        <!--<item name="android:layout_margin">1dp</item>-->
+    </style>
+</resources>

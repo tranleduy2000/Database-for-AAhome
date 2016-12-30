@@ -1,0 +1,955 @@
+<resources>
+    <string name="app_name">ServerFirebase</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="t_n_ng_nh_p">Tên đăng nhập</string>
+    <string name="m_t_kh_u">Mật khẩu</string>
+    <string name="ng_nh_p">Đăng nhập</string>
+    <string name="auto_login">Tự động đang nhập</string>
+    <string name="ng_nh_p_cap">ĐĂNG NHẬP</string>
+    <string name="quick_connect">Kết nối nhanh</string>
+    <string name="a_ch_ip">Địa chỉ IP</string>
+    <string name="c_ng">Cổng</string>
+    <string name="connecting">Đang kết nối …</string>
+    <string name="off">OFF</string>
+    <string name="add_device">Add Device</string>
+    <string name="add_mode">Add Mode</string>
+    <string name="title_activity_weather_maps">Map</string>
+    <string name="device_id">Chân Arduino</string>
+    <string name="device_name">Tên</string>
+    <string name="device_description">Mô tả</string>
+    <string name="device_commnad">Command</string>
+    <string name="add">Thêm thiết bị</string>
+    <string name="on">ON</string>
+    <string name="title_activity_room">RoomActivity</string>
+    <string name="key_dev">key_developer</string>
+    <string name="description_connect">Địa chỉ IP (IP Address): \r\nVào ứng dụng cài đặt (Setting) -> Wifi -> Nhấn vào Wifi của Arduino \r\nĐịa chỉ IP của Arduino có dạng: 192.168.4.x \r\nCổng (Port): 80</string>
+    <string name="description_ip">Địa chỉ IP (IP Address): \r\n Vào ứng dụng cài đặt (Setting) -> Wifi -> Nhấn vào Wifi của Arduino \r\nĐịa chỉ IP của Arduino có dạng: 192.168.4.x</string>
+    <string name="description_port">Cổng (Port): 80</string>
+    <string name="system_security">Hệ thống bảo mật</string>
+    <string name="alarm_system">Hệ thống báo cháy</string>
+    <string name="door_system">Hệ thống cửa thông minh</string>
+
+
+    <string-array name="spin_device">
+        <item>Chi tiết</item>
+        <item>Chỉnh sửa</item>
+        <item>Xóa</item>
+    </string-array>
+
+
+    <string name="label_google_sign_in">Firebase + Google Sign In</string>
+    <string name="desc_google_sign_in">Use a Google Sign In credential to authenticate with Firebase.</string>
+
+    <string name="label_facebook_login">Firebase + Facebook Login</string>
+    <string name="desc_facebook_login">Use a Facebook Login credential to authenticate with Firebase.</string>
+
+    <string name="label_twitter_login">Firebase + Twitter Login</string>
+    <string name="desc_twitter_login">Use a Twitter Login credential to authenticate with Firebase.</string>
+
+    <string name="label_emailpassword">Email/Password Authentication</string>
+    <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
+
+    <string name="label_anonymous_auth">Anonymous Authentication</string>
+    <string name="desc_anonymous_auth">Sign in anonymously and then later upgrade to a full Firebase Auth user..</string>
+
+    <string name="label_custom_auth">Custom Authentication</string>
+    <string name="desc_custom_auth">Use a custom token signed by your own server to authenticate with Firebase.</string>
+
+    <string name="hint_user_id">User ID</string>
+    <string name="get_custom_token">Get Token</string>
+    <string name="sign_in">Sign In</string>
+    <string name="create_account">Tạo tài khoản</string>
+    <string name="sign_out">Đăng xuất</string>
+    <string name="disconnect">Ngắt kết nối</string>
+    <string name="loading">Đang tải …</string>
+    <string name="custom_token">Custom Token</string>
+    <string name="signed_out">Đã đăng xuất</string>
+    <string name="token_null">Token: null</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Mật khẩu</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+    <string name="auth_failed">Authentication failed</string>
+
+    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="firebase_user_management">Firebase User Management</string>
+
+    <string name="google_status_fmt">Google User: %s</string>
+    <string name="google_title_text">Google Sign In</string>
+
+    <string name="facebook_status_fmt">Facebook User: %s</string>
+    <string name="facebook_title_text">Facebook Login</string>
+
+    <string name="emailpassword_status_fmt">Email User: %s</string>
+    <string name="emailpassword_title_text">Email and Password</string>
+
+    <string name="twitter_status_fmt">Twitter User: %s</string>
+    <string name="twitter_title_text">Twitter Login</string>
+
+    <string name="id_fmt">User ID: %s</string>
+    <string name="email_fmt">Email: %s</string>
+
+    <string name="action_sign_in_short">Đăng kí</string>
+    <string name="email">Email</string>
+    <string name="minimum_password">Mật khẩu quá ngắn, độ dài ít nhất 6 kí tự!</string>
+    <string name="change_email">Thay đổi Email</string>
+    <string name="change_password">Thay đổi mật khẩu</string>
+    <string name="send_password_reset_email">Gửi email đặt lại mật khẩu</string>
+    <string name="remove_user">Xóa ngươi dùng</string>
+    <string name="new_pass">Mật khẩu mới</string>
+    <string name="title_activity_profile">Firebase</string>
+    <string name="title_activity_login">Đăng nhập</string>
+    <string name="hint_name">Fullname</string>
+    <string name="btn_login">Đăng nhập</string>
+    <string name="btn_link_to_register">Chưa có tài khoản, đăng kí ngay!</string>
+    <string name="btn_link_to_login">Đã có tài khoản, đăng nhập!</string>
+    <string name="title_activity_reset_password">Đặt lại mật khẩu</string>
+    <string name="btn_forgot_password">Quên mật khẩu?</string>
+    <string name="btn_reset_password">Đặt lại mật khẩu</string>
+    <string name="btn_back">Trở về</string>
+    <string name="hint_new_email">Email mới</string>
+    <string name="btn_change">Thay đổi</string>
+    <string name="btn_send">Send</string>
+    <string name="btn_remove">Xóa</string>
+    <string name="btn_sign_out">Đăng xuất</string>
+    <string name="lbl_forgot_password">Quên mật khẩu?</string>
+    <string name="forgot_password_msg">Nhập email tài khoản của bạn, chúng tôi sẽ gửi mail xác nhận đặt lại mật khẩu.</string>
+    <string name="enter_email_address">Nhập địa chỉ email!</string>
+    <string name="enter_password">Nhập mật khẩu!</string>
+    <string name="logining">Đang đăng nhập …</string>
+    <string name="remember_pass">Nhớ mật khẩu</string>
+    <string name="send_email_fail">Gửi email thất bại</string>
+    <string name="thong_ke">THỐNG KÊ</string>
+    <string name="mode">CHẾ ĐỘ</string>
+    <string name="device">THIẾT BỊ</string>
+    <string name="camera">CAMERA</string>
+    <string name="delete_failed">Xóa thất bại</string>
+    <string name="do_you_want_delete_device">Bạn có muốn xóa thiết bị?</string>
+    <string name="no">Không</string>
+    <string name="yes">Có</string>
+    <string name="h_th_ng_nh_s_ng_t_ng_c_n_b_ng">Hệ thống ánh sáng tự động cân bằng</string>
+    <string name="h_th_ng_nh_s_ng_t_ng_on_off">Hệ thống ánh sáng tự động On/Off</string>
+    <string name="nh_s_ng_t_ng">Ánh sáng tự động</string>
+    <string name="connect">Kết nối</string>
+    <string name="not_connect">Chưa kết nối</string>
+    <string name="text_1">Kết nối thất bại, không phải giao thức SPP!</string>
+    <string name="dis_connect">Ngắt kết nối</string>
+    <string name="connected">Đã kết nối</string>
+    <string name="devices">THIẾT BỊ</string>
+    <string name="cmd">COMMAND</string>
+    <string name="cam">CAMERA</string>
+    <string name="title_activity_enter_pass_door">EnterPassDoorActivity</string>
+    <string name="open_door">MỞ CỬA</string>
+
+    <!-- Displayed letters for the hex digit buttons -->
+    <string name="A" translatable="false">A</string>
+    <!-- Displayed letters for the hex digit buttons -->
+    <string name="B" translatable="false">B</string>
+    <!-- Displayed letters for the hex digit buttons -->
+    <string name="C" translatable="false">C</string>
+    <!-- Displayed letters for the hex digit buttons -->
+    <string name="D" translatable="false">D</string>
+    <!-- Displayed letters for the hex digit buttons -->
+    <string name="E" translatable="false">E</string>
+    <!-- Displayed letters for the hex digit buttons -->
+    <string name="F" translatable="false">F</string>
+    <!-- Displayed letters for the variable digit buttons -->
+    <string name="X" translatable="false">X</string>
+    <!-- Displayed letters for the variable digit buttons -->
+    <string name="Y" translatable="false">Y</string>
+
+    <!-- Do not translate. Plus sign / unicode minus sign; don't translate. Displayed as button on screen. -->
+    <string name="sign" translatable="false">sign</string>
+    <!-- Do not translate. Coma; don't translate. Displayed as button on screen. -->
+    <string name="coma" translatable="false">,</string>
+
+    <!-- Displayed on buttons on screen for the arcsin function. -->
+    <string name="arcsin" translatable="false">sin⁻¹</string>
+    <!-- Displayed on buttons on screen for the arccos function. -->
+    <string name="arccos" translatable="false">cos⁻¹</string>
+    <!-- Displayed on buttons on screen for the arctan function. -->
+    <string name="arctan" translatable="false">tan⁻¹</string>
+
+    <!-- Displayed on buttons on screen for the value of i. -->
+    <string name="i" translatable="false">i</string>
+    <!-- Displayed on buttons on screen for the percent function. -->
+    <string name="percentage" translatable="false">%</string>
+    <!-- (Hidden) Displayed on buttons on screen for the integral function. -->
+    <string name="integral" translatable="false">\u222B</string>
+    <!-- (Hidden) Displayed on buttons on screen for the integral function. -->
+    <string name="dx">dX</string>
+    <!-- (Hidden) Displayed on buttons on screen for the integral function. -->
+    <string name="dy">dY</string>
+    <!-- (Hidden) Displayed on buttons on screen to eval for X. -->
+    <string name="solveForX">Solve for X</string>
+    <!-- (Hidden) Displayed on buttons on screen to eval for Y. -->
+    <string name="solveForY">Solve for Y</string>
+    <!-- (Hidden) Displayed on buttons on screen for the modulo function. -->
+    <string name="mod">#</string>
+
+    <!-- Displayed on buttons on screen for parentheses. -->
+    <string name="parentheses" translatable="false">( )</string>
+
+    <!-- Menu item text to take user to the screen with the graph. -->
+    <string name="nav_graph">Graph panel</string>
+    <!-- Menu item text to take user to the screen with the function operators. -->
+    <string name="function">Function panel</string>
+    <!-- Menu item text to take user to the screen with the hex digits and operators. -->
+    <string name="hexPanel">Hex panel</string>
+    <!-- Menu item text to lock view pager. -->
+    <string name="lock">Lock page</string>
+    <!-- Menu item text to unlock view pager. -->
+    <string name="unlock">Unlock page</string>
+
+    <string name="copy">Copy \'%s\'</string>
+    <!-- History menu item for removing item from history -->
+    <string name="remove_from_history">Remove from history</string>
+    <!-- History menu item for viewing history -->
+    <string name="showHistory">Show history</string>
+    <!-- History menu item for hiding history -->
+    <string name="hideHistory">Hide history</string>
+    <!-- History menu item for entering settings -->
+    <string name="settings">Cài đặt</string>
+
+    <!-- Matrix page text -->
+    <string name="det">det</string>
+    <string name="eigenvalue">Eigen</string>
+    <string name="solve">Tìm nghiệm</string>
+    <string name="dotProduct">Dot</string>
+    <string name="crossProduct">Cross</string>
+    <string name="determinantDesc">det</string>
+    <string name="eigenvalueDesc">Eigenvalues</string>
+    <string name="plus_row">+Row</string>
+    <string name="minus_row">-Row</string>
+    <string name="plus_col">+Col</string>
+    <string name="minus_col">-Col</string>
+    <string name="matrix_new" translatable="false">[ ]</string>
+    <string name="matrix_inverse" translatable="false">-1</string>
+    <string name="matrix_transpose">T</string>
+    <string name="next">Next</string>
+
+    <!-- Hex page text -->
+    <string name="hex" translatable="false">Hex</string>
+    <string name="bin" translatable="false">Bin</string>
+    <string name="dec" translatable="false">Dec</string>
+    <string name="oct" translatable="false">Oct</string>
+    <string name="hexDesc" translatable="false">Hexadecimal</string>
+    <string name="binDesc" translatable="false">Binary</string>
+    <string name="decDesc" translatable="false">Decimal</string>
+
+
+    <!-- Separators for dec, bin, and hex. Must be 1 charater! -->
+    <string name="dec_separator">,</string>
+    <string name="bin_separator" translatable="false">\u0020</string>
+    <string name="hex_separator">\u0020</string>
+    <item name="dec_separator_distance" type="integer">3</item>
+    <item name="bin_separator_distance" type="integer">4</item>
+    <item name="hex_separator_distance" type="integer">2</item>
+
+    <!-- Decimal point. Make sure Matrix separator is unique from decimal. Make sure dot is unique from the above separators. -->
+    <string name="dot">.</string>
+    <string name="matrix_separator">.</string>
+
+    <string name="easter_egg">Always take a banana to a party, Rose: bananas are good!</string>
+    <!-- If there is a syntax error in the user entered calculation, an error dialog will appear.  This is the title. -->
+    <string name="error">Lỗi</string>
+    <!-- Displayed numbers for the digit buttons -->
+    <string name="digit0" translatable="false">0</string>
+    <!-- Displayed numbers for the digit buttons -->
+    <string name="digit1" translatable="false">1</string>
+    <!-- Displayed numbers for the digit buttons -->
+    <string name="digit2" translatable="false">2</string>
+    <!-- Displayed numbers for the digit buttons -->
+    <string name="digit3" translatable="false">3</string>
+    <!-- Displayed numbers for the digit buttons -->
+    <string name="digit4" translatable="false">4</string>
+    <!-- Displayed numbers for the digit buttons -->
+    <string name="digit5" translatable="false">5</string>
+    <!-- Displayed numbers for the digit buttons -->
+    <string name="digit6" translatable="false">6</string>
+    <!-- Displayed numbers for the digit buttons -->
+    <string name="digit7" translatable="false">7</string>
+    <!-- Displayed numbers for the digit buttons -->
+    <string name="digit8" translatable="false">8</string>
+    <!-- Displayed numbers for the digit buttons -->
+    <string name="digit9" translatable="false">9</string>
+    <!-- Button name on screen to delete the last entered digit or operator -->
+    <string name="del">DELETE</string>
+    <!-- Button name on screen to clear the entire calculation field. [CHAR LIMIT=6] -->
+    <string name="clear" translatable="false">CLR</string>
+    <!-- Do not translate. Unicode division sign; don't translate. Displayed as button on screen. -->
+    <string name="div" translatable="false">÷</string>
+    <!-- Do not translate. Unicode multiplication sign; don't translate. Displayed as button on screen. -->
+    <string name="mul" translatable="false">×</string>
+    <!-- Do not translate. Plus sign, displayed as button on screen -->
+    <string name="plus" translatable="false">+</string>
+    <!-- Do not translate. Unicode minus sign; don't translate. Displayed as button on screen. -->
+    <string name="minus" translatable="false">-</string>
+    <!-- Do not translate. Equal sign; don't translate. Displayed as button on screen. -->
+    <string name="equal" translatable="false">=</string>
+    <!-- Do not translate. Down arrow; don't translate. Displayed as button on screen. -->
+    <string name="enter">\u2193</string>
+    <!-- Displayed on buttons on screen for the sin function. -->
+    <string name="sin" translatable="false">Sin</string>
+    <!-- Do not translate. What we replace translated SIN with for calculating sin.-->
+
+    <!-- Displayed on buttons on screen for the cos function. -->
+    <string name="cos" translatable="false">Cos</string>
+    <!-- Do not translate. What we replace translated COS with for calculating cos. -->
+
+    <!-- Displayed on buttons on screen for the tan function. -->
+    <string name="tan" translatable="false">Tan</string>
+    <!-- Do not translate. What we replace translated TAN with for calculating tan. -->
+
+    <!-- Displayed on buttons on screen for the e function. -->
+    <string name="e">e</string>
+    <!-- Do not translate. What we replace translated e with for calculating e. -->
+
+    <!-- Displayed on buttons on screen for the ln function. -->
+    <string name="ln">ln</string>
+    <!-- Do not translate. What we replace translated ln with for calculating ln. -->
+
+    <!-- Displayed on buttons on screen for the log function. -->
+    <string name="lg">log</string>
+    <!-- Do not translate. What we replace translated lg with for calculating lg. -->
+
+    <!-- Displayed on buttons on screen for a left parenthesis. -->
+    <string name="leftParen" translatable="false">(</string>
+    <!-- Displayed on buttons on screen for a right parenthesis. -->
+    <string name="rightParen" translatable="false">)</string>
+    <!-- Do not translate. Unicode square root sign; don't translate. Displayed on button on screen. -->
+    <string name="sqrt_sym" translatable="false">√</string>
+    <!-- Do not translate. -->
+    <string name="factorial" translatable="false">!</string>
+    <!-- Menu item text to take user to the screen with the basic digits and operators. -->
+    <string name="basic">Basic panel</string>
+    <!-- Menu item text to take user to the screen with the advanced functions, such as sin, cos, ln, log, etc. -->
+    <string name="advanced">Advanced panel</string>
+    <!-- Menu item text to clear the calculation history. -->
+    <string name="clear_history">Clear history</string>
+    <!-- Toast shown when text is copied to the clipboard. -->
+    <string name="text_copied_toast">Text copied.</string>
+
+    <!--Content descriptions for accessibility. These strings will be read aloud to users who are using the calculator with
+    accessibility features enabled and should reflect the mathematical concept instead of a direct representation of what is shown
+    on the button-->
+    <string name="leftParenDesc">left parenthesis</string>
+    <string name="rightParenDesc">right parenthesis</string>
+    <string name="factorialDesc">factorial</string>
+    <string name="lnDesc">natural logarithm</string>
+    <string name="lgDesc">logarithm</string>
+    <string name="sqrtDesc">square root</string>
+    <string name="divDesc" translatable="false">divide</string>
+    <string name="mulDesc">multiply</string>
+    <string name="plusDesc">plus</string>
+    <string name="minusDesc">minus</string>
+    <string name="dot_desc">point</string>
+    <string name="powerDesc">power</string>
+    <string name="delDesc">delete</string>
+    <string name="clear_desc">clear</string>
+    <string name="tanDesc" translatable="false">tangent</string>
+    <string name="sinDesc" translatable="false">sine</string>
+    <string name="cosDesc" translatable="false">cosine</string>
+    <string name="eDesc">Euler\'s number</string>
+    <string name="piDesc">pi</string>
+    <string name="equalDesc">equals</string>
+
+    <!--Content descriptions for accessibility used as keys when determining which mathematical
+    concept description to speak when accessibility features are enabled. Order of the array is
+    important. -->
+    <string-array name="operators" translatable="false">
+        <item>(</item>
+        <item>)</item>
+        <item>!</item>
+        <item>ln</item>
+        <item>log</item>
+        <item>\u221a</item>
+        <item>\u00f7</item>
+        <item>\u00d7</item>
+        <item>+</item>
+        <item>\u2212</item>
+        <item>.</item>
+        <item>^</item>
+        <item>tan</item>
+        <item>sin</item>
+        <item>cos</item>
+        <item>\u03c0</item>
+        <item>=</item>
+    </string-array>
+
+
+    <string name="power" translatable="false">^</string>
+
+
+    <string name="pt_bac_nhat">Phương trình bậc nhất</string>
+    <string name="pt_bac_ba">Phương trình bậc ba</string>
+    <string name="pt_bac_hai">Phương trình bậc hai</string>
+    <string name="hpt_bac_nhat">HPT bậc nhất hai ẩn</string>
+    <string name="hpt_ba_an">HPT bậc nhất ba ẩn</string>
+    <string name="title_activity_phuong_trinh_bac_nhat">Phương trình bậc nhất</string>
+
+    <string name="title_activity_phuong_trinh_bac_hai">Phương trình bậc hai</string>
+    <string name="title_activity_phuong_trinh_bac_ba">Phương trình bậc ba</string>
+    <string name="title_activity_he_phuong_trinh_hai_an">HPT hai ẩn</string>
+    <string name="title_activity_he_phuong_trinh_ba_an">HPT ba ẩn</string>
+    <string name="giai_pt">Giải phương trình</string>
+    <string name="vo_so_nghiem">Phương trình vô số nghiệm</string>
+    <string name="vo_nghiem">Phương trình vô nghiệm</string>
+    <string name="xoa">Xóa</string>
+    <string name="text_pt_bac_hai" translatable="false">ax² + bx + c = 0</string>
+    <string name="text_bpt_bac_hai" translatable="false">$$f(x) = ax^2 + bx + c$$</string>
+    <string name="text_pt_bac_ba" translatable="false">ax³ + bx² + cx + d = 0</string>
+    <string name="text_pt_bac_nhat" translatable="false">ax + b = 0</string>
+    <string name="bpt_bac_hai">BPT bậc hai</string>
+    <string name="bpt_bac_nhat">BPT bậc nhất</string>
+    <string name="do_thi">Đồ thị</string>
+    <string name="name_author">Trần Lê Duy</string>
+    <string name="he_vo_so_nghiem">HPT vô số nghiệm</string>
+    <string name="he_vo_nghiem">HPT vô nghiệm</string>
+    <string name="giai">Giải</string>
+    <string name="ve">Vẽ</string>
+    <string name="text_bpt_bac_nhat" translatable="false">$$f(x) = ax + b$$</string>
+    <string name="title_activity_bat_phuong_trinh_bac_nhat_m">BPT bậc nhất</string>
+    <string name="title_activity_bat_phuong_trinh_bac_hai">BPT bậc hai</string>
+    <string name="giai_bpt">Giải bất phương trình</string>
+    <string name="title_item_list">Items</string>
+    <string name="title_item_detail">Item Detail</string>
+    <string name="about">Tác giả</string>
+    <string name="huong_dan">hướng dẫn sử dụng</string>
+    <string name="gop_y">Góp ý</string>
+    <string name="title_activity_author">AuthorActivity</string>
+    <string name="title_activity_chuyen_doi_co_so">Chuyển đổi cơ số</string>
+    <string name="nhap_so_can_chuyen">Nhập số cần chuyển:</string>
+    <string name="chuyen_doi_co_so">Chuyển đổi cơ số</string>
+    <string name="title_activity_graph">Đồ thị</string>
+
+    <string name="hello">Hello World, UnitConverter!</string>
+
+
+    <string name="all_unit_converter">Chuyển đổi đơn vị</string>
+    <string name="title_activity_unit_converter_acitvity">Chuyển đổi đơn vị</string>
+    <string name="title_activity_unit_converter_child">UnitConverterChildActivity</string>
+    <string name="fragment_history_delete_all">Xóa tất cả</string>
+    <string name="header_calc">Máy tính</string>
+    <string name="ans">Ans</string>
+    <string name="delete" translatable="false">DEL</string>
+    <string name="exception_messenge">Lỗi ở vị trí</string>
+    <string name="exception_position">position</string>
+    <string name="x" translatable="false">X</string>
+
+    <!-- Decimal separator (e.g. "1.23"). [CHAR_LIMIT=1] -->
+    <string name="dec_point">.</string>
+    <!-- Abbrev. name of cosine function (e.g. "cos(π)". [CHAR_LIMIT=3] -->
+    <string name="fun_cos">cos</string>
+    <!-- Natural logarithm function (e.g. "ln(2)"). [CHAR_LIMIT=3] -->
+    <string name="fun_ln">ln</string>
+    <!-- Logarithm function (e.g. "log(10)"). [CHAR_LIMIT=3] -->
+    <string name="fun_log">log</string>
+    <!-- Abbrev. name of sine function (e.g. "sin(π)". [CHAR_LIMIT=3] -->
+    <string name="fun_sin">sin</string>
+    <!-- Abbrev. name of tangent function (e.g. "tan(π)". [CHAR_LIMIT=3] -->
+    <string name="fun_tan">tan</string>
+
+    <!-- Clear operation to clear the currently entered expression. [CHAR_LIMIT=3] -->
+    <string name="clr">clr</string>
+    <!-- Delete operation to remove last entered token. [CHAR_LIMIT=3] -->
+
+    <!-- Content Descriptions -->
+    <eat-comment />
+
+    <!-- Content description for 'e' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_const_e">Euler\'s number</string>
+    <!-- Content description for 'π' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_const_pi">pi</string>
+
+    <!-- Content description for '.' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_dec_point">point</string>
+
+    <!-- Content description for '(' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_lparen">left parenthesis</string>
+    <!-- Content description for ')' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_rparen">right parenthesis</string>
+
+    <!-- Content description for 'cos' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_fun_cos">cosine</string>
+    <!-- Content description for 'ln' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_fun_ln">natural logarithm</string>
+    <!-- Content description for 'log' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_fun_log">logarithm</string>
+    <!-- Content description for 'sin' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_fun_sin">sine</string>
+    <!-- Content description for 'tan' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_fun_tan">tangent</string>
+
+    <!-- Content description for '+' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_op_add">plus</string>
+    <!-- Content description for '÷' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_op_div">divide</string>
+    <!-- Content description for '!' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_op_fact">factorial</string>
+    <!-- Content description for '×' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_op_mul">times</string>
+    <!-- Content description for '^' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_op_pow">power</string>
+    <!-- Content description for '√' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_op_sqrt">square root</string>
+    <!-- Content description for '-' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_op_sub">minus</string>
+
+    <!-- Content description for "clr" button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_clr">clear</string>
+    <!-- Content description for "del" button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_del">delete</string>
+    <!-- Content description for '=' button. [CHAR_LIMIT=NONE] -->
+    <string name="desc_eq">equals</string>
+
+    <!-- Displayed letters for the variable digit buttons -->
+    <string name="var_x" translatable="false">X</string>
+    <!-- Displayed letters for the variable digit buttons -->
+    <string name="var_y" translatable="false">Y</string>
+
+    <!-- Displayed on buttons on screen for the arcsin function. -->
+    <string name="fun_arcsin">asin</string>
+    <!-- Displayed on buttons on screen for the arccos function. -->
+    <string name="fun_arccos">acos</string>
+    <!-- Displayed on buttons on screen for the arctan function. -->
+    <string name="fun_arctan">atan</string>
+    <!-- Displayed on buttons on screen for the csc function. -->
+    <string name="fun_csc">csc</string>
+    <!-- Displayed on buttons on screen for the sec function. -->
+    <string name="fun_sec">sec</string>
+    <!-- Displayed on buttons on screen for the cot function. -->
+    <string name="fun_cot">cot</string>
+    <!-- Displayed on buttons on screen for the arccsc function. -->
+    <string name="fun_arccsc">acsc</string>
+    <!-- Displayed on buttons on screen for the arcsec function. -->
+    <string name="fun_arcsec">asec</string>
+    <!-- Displayed on buttons on screen for the arccot function. -->
+    <string name="fun_arccot">acot</string>
+
+    <!-- Descriptions for trig functions -->
+    <string name="desc_fun_arcsin">Arc Sine</string>
+    <string name="desc_fun_arccos">Arc Cosine</string>
+    <string name="desc_fun_arctan">Arc Tangent</string>
+    <string name="desc_fun_csc">Cosecent</string>
+    <string name="desc_fun_sec">Secent</string>
+    <string name="desc_fun_cot">Cotangent</string>
+    <string name="desc_fun_arccsc">Arc Cosecent</string>
+    <string name="desc_fun_arcsec">Arc Secent</string>
+    <string name="desc_fun_arccot">Arc Cotangent</string>
+
+    <!-- Displayed on buttons on screen for the value of i. -->
+    <string name="const_imaginary" translatable="false">i</string>
+    <!-- Displayed on buttons on screen for the percent function. -->
+    <string name="fun_percentage" translatable="false">%</string>
+
+    <!-- Displayed on button on screen for the cube root function. -->
+    <string name="op_cbrt">\u00b3\u221a</string>
+    <string name="desc_op_cbrt">cube root</string>
+
+
+    <string name="desc_parentheses">Parentheses</string>
+
+
+    <string name="desc_fun_det">Determinant</string>
+    <string name="desc_fun_eigen_value">Eigenvalues</string>
+
+    <string name="fun_det">det</string>
+    <string name="fun_inverse">inver</string>
+    <string name="fun_transpose">trans</string>
+    <string name="fun_trace">trace</string>
+    <string name="fun_norm">norm</string>
+    <string name="fun_polar">polar</string>
+
+    <string name="desc_oct">Octal</string>
+    <string name="desc_hex">Hexadecimal</string>
+    <string name="desc_bin">Binary</string>
+    <string name="desc_dec">Decimal</string>
+
+    <string name="desc_fun_percentage">Percent</string>
+
+    <string name="panel_graph">Graph</string>
+    <string name="panel_advanced">Advanced</string>
+    <string name="panel_trig">Trigonometry</string>
+    <string name="panel_hex">Hexadecimal</string>
+    <string name="panel_matrix">Matrix</string>
+    <string name="panel_function">Function</string>
+    <string name="panel_close_btn">Close</string>
+
+    <string name="function_rename">Rename</string>
+    <string name="function_clear">Clear</string>
+
+    <string name="radians" translatable="false">RAD</string>
+    <string name="degrees" translatable="false">DEG</string>
+    <string name="all_calculator">Máy tính</string>
+    <string name="all_equation">Phương trình</string>
+    <string name="preferences" translatable="false">Preferences</string>
+    <string name="inf">Infinity</string>
+    <string name="cbrt" translatable="false">cbrt</string>
+    <string name="title_activity_settings">Cài đặt</string>
+
+    <!-- Strings related to Settings -->
+
+    <!-- Example General settings -->
+    <string name="pref_header_general">General</string>
+
+    <string name="pref_title_social_recommendations">Enable social recommendations</string>
+    <string name="pref_description_social_recommendations">Recommendations for people to contact
+        based on your message history
+    </string>
+
+    <string name="pref_title_display_name">Display name</string>
+    <string name="pref_default_display_name">John Smith</string>
+
+    <string name="pref_title_add_friends_to_messages">Add friends to messages</string>
+    <string-array name="pref_example_list_titles">
+        <item>Always</item>
+        <item>When possible</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_example_list_values">
+        <item>1</item>
+        <item>0</item>
+        <item>-1</item>
+    </string-array>
+
+    <!-- Example settings for Data & Sync -->
+    <string name="pref_header_data_sync">Data &amp; sync</string>
+
+    <string name="pref_title_sync_frequency">Sync frequency</string>
+    <string name="font_and_style">Font chữ, kiểu chữ</string>
+    <string name="input_graph">Nhập hàm số</string>
+    <string-array name="pref_sync_frequency_titles">
+        <item>15 minutes</item>
+        <item>30 minutes</item>
+        <item>1 hour</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>Never</item>
+    </string-array>
+    <string-array name="pref_sync_frequency_values">
+        <item>15</item>
+        <item>30</item>
+        <item>60</item>
+        <item>180</item>
+        <item>360</item>
+        <item>-1</item>
+    </string-array>
+
+    <string name="title_activity_geometry">Hình học 2D Descartes</string>
+    <string name="nav_descartes">Hình học 2D Descartes</string>
+    <string name="corner">Góc</string>
+    <string name="point">Điểm</string>
+    <string name="vertex">Véc tơ</string>
+    <string name="polygon">Đa giác</string>
+    <string name="circle">Đường tròn</string>
+    <string name="ellipse">Ê-líp</string>
+    <string name="vecter">Véc tơ</string>
+    <string name="vector">Véc tơ</string>
+
+    <string name="not_interaction">Không có giao điểm</string>
+    <string name="circle_tangent">Hai đường tròn tiếp xúc nhau</string>
+    <string name="circle_interaction">Hai đường tròn cắt nhau</string>
+    <string name="tangent">Tiếp xúc</string>
+    <string name="interaction">Cắt nhau</string>
+    <string name="outside">Bên ngoài</string>
+    <string name="inside">Bên trong</string>
+    <string name="above_circle">Nằm trên đường tròn</string>
+    <string name="not_line">Không phải là đường thẳng</string>
+    <string name="line">Đường thẳng</string>
+    <string name="not_in_circle">Không thuộc đường tròn</string>
+    <string name="collinear">Thẳng hàng</string>
+    <string name="parallel">Song song</string>
+
+    <string name="or_symbol" translatable="false">∨</string>
+    <string name="neg_symbol" translatable="false">¬</string>
+    <string name="iff_symbol" translatable="false">⇔</string>
+    <string name="xor_symbol" translatable="false">⊕</string>
+    <string name="and_symbol" translatable="false">∧</string>
+
+
+    <string name="app_information">Giới thiệu</string>
+    <string name="title_activity_app_about">Giới thiệu NCalc+</string>
+
+    <string name="and" translatable="false">&amp;</string>
+    <string name="and_desc">logical conjunction</string>
+
+    <string name="or" translatable="false">|</string>
+    <string name="or_desc">logical (inclusive) disjunction</string>
+
+    <string name="not" translatable="false">not</string>
+    <string name="not_desc">not</string>
+
+    <string name="xor" translatable="false">(+)</string>
+    <string name="xor_desc">exclusive disjunction</string>
+
+    <string name="xnor" translatable="false">xnor</string>
+    <string name="xnor_desc">exclusive or (XOR)</string>
+
+    <string name="neg" translatable="false">~</string>
+    <string name="neg_desc">Negation</string>
+
+    <string name="implies_desc" translatable="false">→</string>
+    <string name="if_desc">material implication</string>
+
+    <string name="iff" translatable="false">iff</string>
+    <string name="iff_desc">if and only if</string>
+
+    <string name="delete_desc">Xóa</string>
+    <string name="coma_desc">Comma</string>
+
+    <string name="nor" translatable="false">~|</string>
+    <string name="nor_desc">Logical NOR</string>
+
+    <string name="imp" translatable="false">imp</string>
+    <string name="imp_desc">Implication</string>
+
+    <string name="cimp" translatable="false">←</string>
+    <string name="cimp_desc">Converse implication</string>
+
+    <string name="nimp" translatable="false">nimp</string>
+    <string name="nimp_desc">Material nonimplication</string>
+
+    <string name="cnimp" translatable="false">&lt;/-</string>
+    <string name="cnimp_desc">Converse nonimplication</string>
+
+    <string name="eqv" translatable="false">↔</string>
+    <string name="eqv_desc">Logical biconditional</string>
+
+    <string name="nand" translatable="false">~&amp;</string>
+    <string name="nand_desc">NAND - Sheffer stroke</string>
+
+    <string name="title_activity_polynomial_solve">PolynomialSolveActivity</string>
+    <string name="polynomial_solve">Tìm nghiệm đa thức bậc n</string>
+    <string name="plese_input">Vui lòng nhập dữ liệu</string>
+    <string name="close">Đóng</string>
+    <string name="no_data">Không có dữ liệu</string>
+    <string name="find_root">Tìm nghiệm</string>
+
+    <string name="title_activity_special_number">SpecialNumberActivity</string>
+    <string name="is_prime">Kiểm tra có phải là số nguyên tố</string>
+    <string name="next_prime">Số nguyên tố tiếp theo</string>
+    <string name="factor_prime">Phân tích thừa số nguyên tố</string>
+    <string name="gcd_up" translatable="false">GCD</string>
+    <string name="gcd_description">Bội chung nhỏ nhất</string>
+    <string name="lcm_description">Ước chung lớn nhất</string>
+    <string name="lucas_n">Số lucas thứ n</string>
+    <string name="fibo_n">Số Fibonacci thứ n</string>
+    <string name="logic_calculator">Máy tính cơ số</string>
+    <string name="log10">log10</string>
+    <string name="log2">log2</string>
+    <string name="sinh" translatable="false">sinh</string>
+    <string name="cosh" translatable="false">cosh</string>
+    <string name="tanh" translatable="false">tanh</string>
+    <string name="abs" translatable="false">abs</string>
+    <string name="sgn" translatable="false">sgn</string>
+    <string name="floor">floor</string>
+    <string name="ceil" translatable="false">ceil</string>
+    <string name="atanh">tanh⁻¹</string>
+    <string name="sum" translatable="false">sum</string>
+    <string name="prod" translatable="false">prod</string>
+    <string name="der" translatable="false">der</string>
+    <string name="der_minus" translatable="false">der-</string>
+    <string name="der_plus" translatable="false">der+</string>
+    <string name="diff">D</string>
+    <string name="difb">difb</string>
+    <string name="avg">avg</string>
+    <string name="vari" translatable="false">vari</string>
+    <string name="stdi" translatable="false">stdi</string>
+    <string name="mini">mini</string>
+    <string name="maxi">maxi</string>
+    <string name="min">min</string>
+    <string name="max">max</string>
+    <string name="std" translatable="false">std</string>
+    <string name="var" translatable="false">var</string>
+    <string name="mean">Mean</string>
+    <string name="comma">,</string>
+    <string name="hide">Ẩn</string>
+
+    <string name="EULER_MASCHERONI_STR" translatable="false">[g]</string>
+    <string name="GOLDEN_RATIO_STR" translatable="false">[p]</string>
+    <string name="PLASTIC_STR" translatable="false">[r]</string>
+    <string name="EMBREE_TREFETHEN_STR" translatable="false">[B*]</string>
+    <string name="FEIGENBAUM_DELTA_STR" translatable="false">[D]</string>
+    <string name="FEIGENBAUM_ALFA_STR" translatable="false">[a]</string>
+    <string name="TWIN_PRIME_STR" translatable="false">[C2]</string>
+    <string name="MEISSEL_MERTEENS_STR" translatable="false">[M1]</string>
+    <string name="BRAUN_TWIN_PRIME_STR" translatable="false">[B2]</string>
+    <string name="BRAUN_PRIME_QUADR_STR" translatable="false">[B4]</string>
+    <string name="BRUIJN_NEWMAN_STR" translatable="false">[L]</string>
+    <string name="CATALAN_STR" translatable="false">[K]</string>
+    <string name="LANDAU_RAMANUJAN_STR" translatable="false">[K*]</string>
+    <string name="VISWANATH_STR" translatable="false">[K.]</string>
+    <string name="RAMANUJAN_SOLDNER_STR" translatable="false">[m]</string>
+    <string name="ERDOS_BORWEIN_STR" translatable="false">[EB]</string>
+    <string name="BERNSTEIN_STR" translatable="false">[B]</string>
+    <string name="GAUSS_KUZMIN_WIRSING_STR" translatable="false">[l]</string>
+    <string name="HAFNER_SARNAK_MCCURLEY_STR" translatable="false">[s]</string>
+    <string name="GOLOMB_DICKMAN_STR" translatable="false">[lm]</string>
+    <string name="CAHEN_STR" translatable="false">[C]</string>
+    <string name="LAPLACE_LIMIT_STR" translatable="false">[Ll]</string>
+    <string name="ALLADI_GRINSTEAD_STR" translatable="false">[AG]</string>
+    <string name="LENGYEL_STR" translatable="false">[L*]</string>
+    <string name="LEVY_STR" translatable="false">[L.]</string>
+    <string name="APERY_STR" translatable="false">[Dz3]</string>
+    <string name="MILLS_STR" translatable="false">[T]</string>
+    <string name="BACKHOUSE_STR" translatable="false">[Bh]</string>
+    <string name="PORTER_STR" translatable="false">[Pt]</string>
+    <string name="LIEB_QUARE_ICE_STR" translatable="false">[L2]</string>
+    <string name="NIVEN_STR" translatable="false">[Nv]</string>
+    <string name="SIERPINSKI_STR" translatable="false">[Ks]</string>
+    <string name="KHINCHIN_STR" translatable="false">[Kh]</string>
+    <string name="FRANSEN_ROBINSON_STR" translatable="false">[F]</string>
+    <string name="LANDAU_STR" translatable="false">[La]</string>
+    <string name="PARABOLIC_STR" translatable="false">[P2]</string>
+    <string name="OMEGA_STR" translatable="false">[O]</string>
+    <string name="MRB_STR" translatable="false">[M]</string>
+    <string name="LI2_STR" translatable="false">[li2]</string>
+    <string name="GOMPERTZ_STR" translatable="false">[G]</string>
+    <string name="eq">==</string>
+    <string name="eq_desc">Bằng nhau</string>
+    <string name="neq" translatable="false">≠</string>
+    <string name="neq_desc">Khác nhau</string>
+    <string name="lt">&lt;</string>
+    <string name="lt_desc">Bé hơn</string>
+    <string name="gt_desc">Lớn hơn</string>
+    <string name="gt">&gt;</string>
+    <string name="leq" translatable="false">≤</string>
+    <string name="leq_desc">Bé hơn hoặc bằng</string>
+    <string name="geq_desc">Lớn hơn hoặc bằng</string>
+    <string name="geq" translatable="false">≥</string>
+
+    <string name="real_to_fraction">Số thập phân ↔ Phân số</string>
+    <string name="title_activity_real_to_fraction">RealToFractionActivity</string>
+
+    <string name="science_calculator">Máy tính khoa học</string>
+    <string name="complex_calculator">Máy tính số phức</string>
+    <string name="title_activity_complex_calculator">ComplexCalculatorActivity</string>
+    <string name="pi_symbol" translatable="false">π</string>
+    <string name="asinh">sinh⁻¹</string>
+    <string name="title_activity_matrix_calculator">Ma trận</string>
+
+    <string name="matrix">Ma trận</string>
+    <string name="matrix_add">A + B</string>
+    <string name="row">dòng</string>
+    <string name="column">cột</string>
+    <string name="create">Tạo</string>
+    <string name="msg_delete_matrix">Bạn có muốn tạo lại ma trận, việc làm này sẽ xóa ma trận hiện có?</string>
+    <string name="error_input_num">Lỗi nhập số</string>
+
+    <string name="title_activity_linear_system">HPT tuyến tính</string>
+    <string name="linear_system">HPT tuyến tính</string>
+
+    <string name="linear_inequation"></string>
+    <string name="linear_equation">$$ax + b = 0$$</string>
+    <string name="quadratic_equation" translatable="false">$$ax^2 + bx + c = 0$$</string>
+    <string name="cube_equation" translatable="false">$$ax^3 + bx^2 + cx + d = 0##</string>
+    <string name="choose_color">Chọn màu</string>
+    <string name="theme">Giao diện</string>
+    <string name="acosh">cosh⁻¹</string>
+    <string name="cot">cot</string>
+    <string name="acot">cot⁻¹</string>
+    <string name="ctanh">ctanh</string>
+    <string name="help">Trợ giúp</string>
+    <string name="feedback">Góp ý chức năng app, báo lỗi trong quá trình sử dụng</string>
+    <string name="dev_mail">Tranleduy1233@gmail.com</string>
+    <string name="key_pos">POS</string>
+    <string name="key_name">NAME</string>
+    <string name="key_data">data</string>
+    <string name="title_activity_solve_equation">Tìm nghiệm phương trình</string>
+
+    <string name="solve_equation">Giải phương trình</string>
+    <string name="text1">vd: x^2 + 1 = 0</string>
+    <string name="ncalc" translatable="false">$$\\text{NCalc+}$$</string>
+    <string name="binomial">Bino</string>
+    <string name="trig_to_exp">Hàm lượng giác → hàm mũ</string>
+    <string name="trig_expand">Phân tích hàm lượng giác</string>
+    <string name="table">Thống kê</string>
+    <string name="simplify_equation">Rút gọn biểu thức</string>
+    <string name="power_expand">Mở rộng biểu thức có mũ</string>
+    <string name="factor_equation">Phân tích đa thức thành nhân tử</string>
+    <string name="exp">exp</string>
+    <string name="euler_phi">∅</string>
+    <string name="exp_desc">Exp</string>
+    <string name="eliminate">Đơn giản các biến</string>
+    <string name="discriminant">Biệt thức delta của đa thức</string>
+    <string name="coefficent">Hệ số của biến trong đa thức</string>
+    <string name="continued_fraction">Liên phân số</string>
+    <string name="input_equation">Nhập phương trình</string>
+    <string name="input_expression">Nhập biểu thức</string>
+    <string name="tranmiss">chuyển</string>
+    <string name="analyze">Phân tích</string>
+    <string name="simplify">Đơn giản</string>
+    <string name="derivative">Đạo hàm</string>
+    <array name="derivative_n">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </array>
+    <string name="input_fraction">Nhập phân số</string>
+    <string name="derivative_symbol">D</string>
+    <string name="coth">coth</string>
+    <string name="lcm">LCM</string>
+    <string name="arg">Arg</string>
+    <string name="var_A">[A]</string>
+    <string name="save_success">Lưu thành công</string>
+    <string name="save_fail">Thất bại</string>
+    <string name="trunc" translatable="false">trunc</string>
+    <string name="gcd_low" translatable="false">gcd</string>
+    <string name="lgamma">lgamma</string>
+    <string name="gamma_sym" translatable="false">Γ</string>
+    <string name="combination" translatable="false">Cnk</string>
+    <string name="permutations" translatable="false">Pnk</string>
+    <string name="in_position">ở vị trí</string>
+    <string name="sqrt">sqrt</string>
+    <string name="inptu_disequationn">Nhập bất phương trình</string>
+    <string name="error_not_disequation">Không phải là bất phương trình</string>
+    <string name="title_diseqaution_activity">Giải bất phương trình đơn giản</string>
+    <string name="input_disequation">Nhập bất phương trình</string>
+    <string name="input_system_equation">Nhập hệ phương trình</string>
+    <string name="solve_for_param">Giải theo ẩn (x,y,z,…)</string>
+    <string name="solve_system_equation">Giải hệ phương trình</string>
+    <string name="cmplx" translatable="false">CMPLX</string>
+    <string name="rad" translatable="false">RAD</string>
+    <string name="interpolate">Nội suy</string>
+    <string name="add_point">Thêm điểm</string>
+    <string name="y">y</string>
+
+    <string name="nh_p_d_li_u_c_ch_nhau_b_i_d_u_ph_y_nv_d_12_232_43_4">Nhập dữ liệu cách nhau bởi dấu phẩy (,) \n \nVí dụ: 12, 232,43, 4</string>
+    <string name="process">Xử lý</string>
+    <string name="auto_process">Tự động xử lý dữ liệu</string>
+    <string name="title_activity_statistic">NStatistics+</string>
+    <string name="kh_ng_h_tr_ocr">Không hỗ trợ OCR</string>
+    <string name="h_ph_ng_tr_nh">Hệ phương trình</string>
+    <string name="b_t_ph_ng_tr_nh">Bất phương trình</string>
+    <string name="more">Thêm ...</string>
+    <string name="bi_t_th_c_delta">Biệt thức Delta</string>
+    <string name="n_i_suy">Nội suy</string>
+    <string name="ph_n_t_ch_bi_u_th_c_ch_a_m">Phân tích biểu thức chứa mũ</string>
+    <string name="chuy_n_s_th_c_v_ph_n_s">Chuyển số thực về phân số</string>
+    <string name="s_c_bi_t">Số đặc biệt</string>
+    <string name="ph_n_t_ch_h_m_l_ng_gi_c">Phân tích hàm lượng giác</string>
+    <string name="chuy_n_h_m_l_ng_gi_c_sang_h_m_m">Chuyển hàm lượng giác sang hàm mũ</string>
+    <string name="more_functions">Thêm chức năng</string>
+    <string name="app_ang_trong_qu_tr_nh_demo_m_i_g_p_xin_g_i_v_mail_tranleduy1233_gmail_com">App đang trong quá trình demo, mọi góp ý xin gửi về mail Tranleduy1233@gmail.com</string>
+    <string name="d_n_ncalc">Dự án NCalc+</string>
+    <string name="m_t_kh_u_hi_n_t_i">Mật khẩu hiện tại</string>
+    <string name="m_t_kh_u_m_i">Mật khẩu mới</string>
+    <string name="nh_p_l_i_m_t_kh_u">Nhập lại mật khẩu</string>
+    <string name="l_u">Lưu</string>
+    <string name="wrong_pass">Sai mật khẩu</string>
+    <string name="text_3">Mật khẩu không trùng!</string>
+    <string name="door_pass">CỬA</string>
+    <string name="info">THÔNG TIN</string>
+    <string name="take">Take</string>
+
+</resources>
