@@ -1,4 +1,4 @@
-package com.duy.databaseservice;
+package com.duy.databaseservice.activity;
 
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.duy.databaseservice.R;
 import com.duy.databaseservice.utils.Variable;
 
 import java.util.ArrayList;
@@ -66,7 +67,7 @@ public class ChooseDeviceActivity extends AppCompatActivity {
                 s = s.substring(s.length() - 17);
                 Intent intent = getIntent();
                 intent.putExtra("data", s);
-                setResult(Variable.MO_ACTIVITY_CHON_THIET_BI, intent);
+                setResult(Variable.REQUEST_CODE_CHOOSE_DEVICE, intent);
                 finish();
             }
         });

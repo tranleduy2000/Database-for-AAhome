@@ -6,7 +6,6 @@ import android.util.Log;
 import com.duy.databaseservice.data.Database;
 import com.duy.databaseservice.items.DeviceItem;
 import com.duy.databaseservice.utils.Protocol;
-import com.firebase.client.Firebase;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -25,11 +24,9 @@ public class FirebaseListener {
     private static final String PIN = "pin";
     private static final String USERS = "users";
     private static final String MODE = "mode";
-    private static final String URL_FIREBASE = "https://smarthome-f6176.firebaseio.com";
     private static final String TAG = FirebaseListener.class.getName();
     private Context mContext;
     private FirebaseUser mUser;
-    private Firebase mFirebase;
     private Database database;
     private EventListener eventListener = null;
     /**
@@ -39,8 +36,6 @@ public class FirebaseListener {
 
     public FirebaseListener(Context context, EventListener eventListener) {
         this.mContext = context;
-        Firebase.setAndroidContext(context);
-        mFirebase = new Firebase(URL_FIREBASE);
         mUser = FirebaseAuth.getInstance().getCurrentUser();
         if (mUser != null) {
             Log.w(TAG, mUser.getUid());
@@ -54,8 +49,6 @@ public class FirebaseListener {
 
     public FirebaseListener(Context applicationContext) {
         this.mContext = applicationContext;
-        Firebase.setAndroidContext(applicationContext);
-        mFirebase = new Firebase(URL_FIREBASE);
         mUser = FirebaseAuth.getInstance().getCurrentUser();
         if (mUser != null) {
             Log.w(TAG, mUser.getUid());
@@ -111,14 +104,16 @@ public class FirebaseListener {
         });
     }
 
-    void setPin(int pin, boolean value) {
-        mFirebase.child(USERS).child(mUser.getUid())
+    public void setPin(int pin, boolean value) {
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        database.getReference(USERS).child(mUser.getUid())
                 .child(PIN).child(String.valueOf(pin)).setValue(value);
     }
 
     @Deprecated
     public void setMode(String mode, boolean value) {
-        mFirebase.child(USERS).child(mUser.getUid())
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        database.getReference(USERS).child(mUser.getUid())
                 .child(MODE).child(String.valueOf(mode)).setValue(value);
     }
 

@@ -27,7 +27,7 @@ public class Variable {
     public static final int ACTIVITY_ADD_DEVICE = 1215;
     public static final int ACTIVITY_CHANGE_INFO_DEVICE = 1216;
     public static final int ACTIVITY_ADD_MODE = 1214;
-    public static final int MO_ACTIVITY_CHON_THIET_BI = 1001;
+    public static final int REQUEST_CODE_CHOOSE_DEVICE = 1001;
     public static final UUID myUUID = UUID.fromString("00001101-0000-1000-8000-00805F9B34FB");
 
 }

@@ -10,10 +10,10 @@ import java.util.Date;
  * Created by edoga on 15-Oct-16.
  */
 
-public class EnvironmentTask {
+public class EnvironmentManager {
     private FirebaseListener mFirebase;
 
-    public EnvironmentTask(FirebaseListener firebase) {
+    public EnvironmentManager(FirebaseListener firebase) {
         this.mFirebase = firebase;
     }
 

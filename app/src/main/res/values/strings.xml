@@ -951,5 +951,6 @@
     <string name="door_pass">CỬA</string>
     <string name="info">THÔNG TIN</string>
     <string name="take">Take</string>
+    <string name="empty_pass">Mat khau khong duoc trong</string>
 
 </resources>

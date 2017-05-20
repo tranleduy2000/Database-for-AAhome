@@ -1,9 +1,8 @@
-package com.duy.databaseservice;
+package com.duy.databaseservice.fragment;
 
 import android.content.Context;
 import android.hardware.Camera;
 import android.media.AudioManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.annotation.NonNull;
@@ -16,6 +15,8 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.FrameLayout;
 
+import com.duy.databaseservice.FirebaseListener;
+import com.duy.databaseservice.R;
 import com.duy.databaseservice.custom_view.CameraView;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,7 +30,6 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.Date;
 
@@ -70,12 +70,8 @@ class FragmentCamera extends Fragment {
                 }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        // taskSnapshot.getMetadata() contains file metadata such as size, content-type, and download URL.
-                        Uri downloadUrl = taskSnapshot.getDownloadUrl();
                     }
                 });
-            } catch (FileNotFoundException e) {
-                Log.v(TAG, e.getMessage());
             } catch (Exception e) {
                 Log.v(TAG, e.getMessage());
             }

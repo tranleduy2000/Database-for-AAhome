@@ -2,7 +2,6 @@ package com.duy.databaseservice.task;
 
 import com.duy.databaseservice.FirebaseListener;
 import com.duy.databaseservice.MainActivity;
-import com.duy.databaseservice.utils.Protocol;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,8 +37,8 @@ public class SyncPinTask {
                     HashMap map = (HashMap) deviceItems.get(i);
                     String pin = String.valueOf(map.get("pin"));
                     boolean status = Boolean.valueOf(String.valueOf(map.get("on")));
-                    context.sendCommand(Protocol.POST + pin + " " +
-                            (status ? "1" : "0"));
+                /*    context.sendCommand(Protocol.POST + pin + " " +
+                            (status ? "1" : "0"));*/
                 }
             }
 

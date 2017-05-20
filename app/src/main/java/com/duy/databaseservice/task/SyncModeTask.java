@@ -2,8 +2,8 @@ package com.duy.databaseservice.task;
 
 import android.util.Log;
 
+import com.duy.databaseservice.EventListener;
 import com.duy.databaseservice.FirebaseListener;
-import com.duy.databaseservice.MainActivity;
 import com.duy.databaseservice.utils.Protocol;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,12 +20,12 @@ import static com.duy.databaseservice.utils.Protocol.FIRE_ALRAM_SYSTEM;
  */
 
 public class SyncModeTask {
-    private MainActivity context;
+    private EventListener listener;
     private FirebaseListener mFirebase;
     private String TAG = SyncModeTask.class.getName();
 
-    public SyncModeTask(MainActivity context, FirebaseListener mFirebase) {
-        this.context = context;
+    public SyncModeTask(EventListener listener, FirebaseListener mFirebase) {
+        this.listener = listener;
         this.mFirebase = mFirebase;
     }
 
@@ -51,7 +51,7 @@ public class SyncModeTask {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue(Boolean.class) != null) {
                     boolean b = dataSnapshot.getValue(Boolean.class);
-                    context.sendCommand(Protocol.POST + Protocol.SET_AUTO_ROOF +
+                    listener.sendCommand(Protocol.POST + Protocol.SET_AUTO_ROOF +
                             (b ? "1" : "0"));
                     Log.w(TAG, "AUTO_ROOF " + b);
                 }
@@ -75,7 +75,7 @@ public class SyncModeTask {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue(Boolean.class) != null) {
                     boolean b = dataSnapshot.getValue(Boolean.class);
-                    context.sendCommand(Protocol.POST + Protocol.SET_AUTO_DOOR +
+                    listener.sendCommand(Protocol.POST + Protocol.SET_AUTO_DOOR +
                             (b ? "1" : "0"));
                     Log.w(TAG, "AUTO_DOOR " + b);
                 }
@@ -99,7 +99,7 @@ public class SyncModeTask {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue(Boolean.class) != null) {
                     boolean b = dataSnapshot.getValue(Boolean.class);
-                    context.sendCommand(Protocol.POST + Protocol.SET_FIRE_ALRAM_SYSTEM +
+                    listener.sendCommand(Protocol.POST + Protocol.SET_FIRE_ALRAM_SYSTEM +
                             (b ? "1" : "0"));
                     Log.w(TAG, "FIRE_ALRAM_SYSTEM " + b);
 
@@ -124,7 +124,7 @@ public class SyncModeTask {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue(Boolean.class) != null) {
                     boolean b = dataSnapshot.getValue(Boolean.class);
-                    context.sendCommand(Protocol.POST + Protocol.SET_AUTO_LIGHT_DIGITAL +
+                    listener.sendCommand(Protocol.POST + Protocol.SET_AUTO_LIGHT_DIGITAL +
                             (b ? "1" : "0"));
                     Log.w(TAG, "AUTO_LIGHT_DIGITAL " + b);
 
@@ -144,7 +144,7 @@ public class SyncModeTask {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue(Boolean.class) != null) {
                     boolean b = dataSnapshot.getValue(Boolean.class);
-                    context.sendCommand(Protocol.POST + Protocol.SET_AUTO_LIGHT_ANALOG +
+                    listener.sendCommand(Protocol.POST + Protocol.SET_AUTO_LIGHT_ANALOG +
                             (b ? "1" : "0"));
                     Log.w(TAG, "AUTO_LIGHT_ANALOG " + b);
 
@@ -169,7 +169,7 @@ public class SyncModeTask {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 if (dataSnapshot.getValue() != null) {
                     boolean b = dataSnapshot.getValue(Boolean.class);
-                    context.sendCommand(Protocol.POST + Protocol.SET_SECURITY +
+                    listener.sendCommand(Protocol.POST + Protocol.SET_SECURITY +
                             (b ? "1" : "0"));
                     Log.w(TAG, "SECURITY " + b);
                 }

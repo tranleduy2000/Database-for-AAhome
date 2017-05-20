@@ -4,11 +4,14 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.duy.databaseservice.data.Preferences;
+import com.duy.databaseservice.task.EnvironmentListener;
 import com.duy.databaseservice.utils.JsonReader;
 import com.duy.databaseservice.utils.Protocol;
 
@@ -17,19 +20,29 @@ import org.json.JSONObject;
 import java.util.Date;
 
 /**
- * Created by edoga on 13-Oct-16.
+ * Created by Duy on 13-Oct-16.
+ * <p>
+ * Class này thực hiện công việc lắng nghe và xử lý các lệnh từ Arduino
+ * gửi tới, ví dụ như xử lý nhiệt độ, độ ẩm, thay đổi trạng trạng thái
+ * các chân trên Arduino...
  */
-
 public class ProcessCommandArduino {
     private final String TAG = ProcessCommandArduino.class.getSimpleName();
+    @Nullable
+    FirebaseListener firebaseListener;
     private long timeLastCall = 0;
-    private MainActivity activity;
+    @Nullable
+    private EnvironmentListener environmentListener;
+    @NonNull
     private Context context;
+    @NonNull
     private Preferences preferences;
 
-    public ProcessCommandArduino(MainActivity activity) {
-        this.activity = activity;
-        this.context = activity.getApplicationContext();
+    public ProcessCommandArduino(EnvironmentListener listener,
+                                 FirebaseListener firebaseListener, Context context) {
+        this.environmentListener = listener;
+        this.firebaseListener = firebaseListener;
+        this.context = context;
         preferences = new Preferences(context);
     }
 
@@ -39,25 +52,26 @@ public class ProcessCommandArduino {
             Log.e("JSON", data.toString());
             if (data.has(Protocol.TEMPERATURE)) {
                 int tempC = Integer.parseInt(data.getString(Protocol.TEMPERATURE));
-                activity.onTemperature(tempC);
+                environmentListener.onTemperature(tempC);
                 Log.w("TEMP ", data.getString(Protocol.TEMPERATURE));
                 preferences.putInt(Preferences.TEMP_LAST, tempC);
             }
             if (data.has(Protocol.HUMIDITY)) {
                 int progress = Integer.parseInt(data.getString(Protocol.HUMIDITY));
                 Log.w("HUMI", data.getString(Protocol.HUMIDITY));
-                activity.onHumidityChange(progress);
+                environmentListener.onHumidityChange(progress);
                 preferences.putInt(Preferences.HUMI_LAST, progress);
             }
+
             if (data.has(Protocol.PIN)) {
                 int pin = data.getInt(Protocol.PIN);
                 boolean isOn = data.getBoolean(Protocol.VALUE_PIN);
-                activity.setPin(pin, isOn);
+                firebaseListener.setPin(pin, isOn);
             }
 
             if (data.has(Protocol.VALUE_LIGHT_SENSOR)) {
                 int s = Integer.parseInt(data.getString(Protocol.VALUE_PIN));
-                activity.onLightChange(s);
+                environmentListener.onLightChange(s);
                 preferences.putInt(Preferences.VALUE_LIGHT_SENSOR_LAST, data.getInt(Protocol.VALUE_PIN));
             }
 
@@ -97,7 +111,7 @@ public class ProcessCommandArduino {
                     Log.d(TAG, "callPhone: can not call because not permission");
                     return;
                 }
-                activity.startActivityForResult(callIntent, 1212);
+//                context.startActivityForResult(callIntent, 1212);
             } else Toast.makeText(context, "Nullable phone number!", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             e.printStackTrace();

@@ -1,4 +1,4 @@
-package com.duy.databaseservice;
+package com.duy.databaseservice.activity;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;

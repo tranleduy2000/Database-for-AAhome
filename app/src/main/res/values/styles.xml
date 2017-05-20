@@ -1,8 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <style name="AppTheme" parent="Theme.AppCompat">
         <item name="buttonOptStyle">@style/ButtonDigitStyle</item>
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
@@ -18,6 +17,5 @@
         <item name="android:layout_width">0dp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">#e0e0e0</item>
-        <!--<item name="android:layout_margin">1dp</item>-->
     </style>
 </resources>
